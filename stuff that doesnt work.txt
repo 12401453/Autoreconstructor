@@ -1,0 +1,43 @@
+--the deviant lengthened-grade stem in the class 5.2(abl) PAP stem of *pьsati (писавъ etc.) isn't detected (all other deviant lengthened-stems of this verb are).  
+
+--метати and искати are always conjugated as class 5.1 or 5.2; the class 5.4 reformations are not detected
+
+--it deliberately doesn't try to detect 3rd dual -те levelled to -та for root-aorists, because the priority here is detecting secondary sigmatic -ост-, so Supr. 3rd dual. о͑брѢтоста outputs: obrětoste|obrětete|
+
+--Doesn't detect отъимати/отимати, сънимати  etc. for original *otьmati etc., or объѩти etc. for обѧти (because I need a better strategy for dealing with stem-deviances).
+
+--comparative мьнѣи needs to be checked for as it's not derivable from *mьńьjь
+
+--дивъше is flagged as deviant because the stem ends in -ив (and because of the possibility of articled forms of PAPs I have to check at least the last 8 letters for *-iv-, meaning this form would always get false-flagged)
+
+--doesn't find pronominal мъногъ inflections (it easily could)
+
+--deviances in stems (e.g. вьседръжитель-type nouns) are mostly ignored
+
+--ниже, скорѣе, мъножѣе, and often лише are tagged as comparatives of adverbs so do not get correctly reconstructed
+
+--ьt-verbs are not checked for the *-ox- aorists, only ruki-violating S-aorists, so Supr.  процвътошꙙ gets reconstructed as prokvišę|prokvisę
+
+--Supr. past passive participle закланъ is not detected, but this is an abhorrent deviance and the regular заколенъ occurs also
+
+--aorist *boršę (брашꙙ) is flagged as a deviant form of *borsę, but /r/ is a ruki consonant
+
+--Supr. Gsg. личеса/личесе
+
+--Deviances in the participle flexions like fem. Nsg. *ћǞ instead of *ћi, or PAP Npl. masc. *ši instead of *še, are detected and changed but the etymologically regular forms aren't generated
+
+--Doesn't bother with the že on nikotorъjь-že, because this is very rare word and arguably wrongly lemmatised anyway (котеръіи spellings)
+
+--the об variant of preposition *o is not detected (could easily be)
+
+--*gorěti is reconstructed as a normal class 3.1 so the class (5.2? 1?) PRAPs *goŕǫћ- (Ru. горючее), masc. Nsg. *goŕę (if we believe the soft-sign mark), possibly class 1 *gorǫћ- if this is not just dispalatalised /ŕ/, is ignored
+
+--Doesn't pick up господеви, only господю
+
+--божий and велий are constructed as *božьj-, *velьj- + the short-form soft adjective ending without regard to the strength marking, because there are too many instances of these words being marked as weak where no article is detectable, e.g. Mar. велиемь|велии|541370|-s---oipwi. There are examples of articled-forms of such words, i.e. those mentioned by Diels 1963 p.198, but the TOROT annotations are not a sensible way to detect them, so until I can be bothered to write a way to check for them, all such articled forms will be incorrectly reconstructed as short-forms. 
+
+--Supr. imperatives like привꙙжате are marked as if they have the *ěte ending from the non-soft stems extended to the soft stems (because in Zogr. this is one of the only places you ever get soft-cons + jat' spellings, i.e ꙇштѣте), and that the jat' in this ending comes from the *ai diphthong, but the Supr. spellings suggest rather an *ē source of the vowel
+
+--Doesn't consider the possibility of S-aorists of class 1 *-ęt- stem verbs (Psal. съмѩ сѩ <*sъmęsъ__sę)
+
+--Pronominals with deviant adjective endings like Marianus ⰵⰴⰻⱀⰰⰰⰳⱁ are not detected
