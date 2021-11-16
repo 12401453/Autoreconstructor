@@ -153,7 +153,7 @@ void Participise(Lemma &lemma_ref, std::string &participle_stem, short int stren
             if(conj_type == "14" && outer_map_no % 10 == 3 && (row_no == 10 || row_no == 13 || row_no == 14 || row_no == 15 || row_no == 16 || row_no == 17 || row_no == 18)) { ablaut_clean_14(flected_word); }
 
       //check for 2,3rd dual and 3pl. imperfects with aorist ending
-      if((row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
+      if(outer_map_no != 1101 && (row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
           { lemma_ref.morph_replace = flected_word; imperf_sheta(flected_word); lemma_ref.lemma_form = flected_word; }
         else { lemma_ref.lemma_form = flected_word;      }
             if (outer_map_no % 10 == 2) {
@@ -188,12 +188,12 @@ void Participise(Lemma &lemma_ref, std::string &participle_stem, short int stren
               if(tense == 2 || /* row_no == 40 || row_no == 41 || */ row_no == 43 || row_no == 44) {class_I_nasal_clean(morph_replace_word); }
               lemma_ref.lemma_form = flected_word;
           //check for 2,3rd dual and 3pl. imperfects with aorist ending
-            if((row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
+            if(outer_map_no != 1101 && (row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
           { imperf_sheta(flected_word); lemma_ref.lemma_form = flected_word; }
 
             lemma_ref.morph_replace = morph_replace_word; return;  }
             else {
-             if((row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
+             if(outer_map_no != 1101 && (row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
                 { lemma_ref.morph_replace = flected_word; imperf_sheta(flected_word); lemma_ref.lemma_form = flected_word; return; }
                  else  { lemma_ref.lemma_form = flected_word; return; }
                }
@@ -206,7 +206,7 @@ void Participise(Lemma &lemma_ref, std::string &participle_stem, short int stren
              std::string morph_replace_word = stem + verb_[outer_map_no - 1][row_no];
              iti_clean(morph_replace_word);
           //check for 2,3rd dual and 3pl. imperfects with aorist ending
-            if((row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
+            if(outer_map_no != 1101 && (row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
               { imperf_sheta(flected_word); lemma_ref.lemma_form = flected_word; }
           else { lemma_ref.lemma_form = flected_word; }
             lemma_ref.morph_replace = morph_replace_word; return;  }
@@ -214,7 +214,7 @@ void Participise(Lemma &lemma_ref, std::string &participle_stem, short int stren
 
 
             else {
-                if((row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
+                if(outer_map_no != 1101 && (row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
                   { lemma_ref.morph_replace = flected_word; imperf_sheta(flected_word); lemma_ref.lemma_form = flected_word; return; }
               else {
               lemma_ref.lemma_form = flected_word; return; }
@@ -229,7 +229,7 @@ void Participise(Lemma &lemma_ref, std::string &participle_stem, short int stren
       if(pisati == true) { lemma_ref.morph_replace = flected_word; class_5_ablaut_clean(stem); lemma_ref.lemma_form = stem + ending; return; }
 
 
-if((row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
+if(outer_map_no != 1101 && (row_no == 23 || row_no == 24 || row_no == 26) && (Sniff(cyr_id, "ста", 3) || Sniff(cyr_id, "сте", 3)))
   { lemma_ref.morph_replace = flected_word; imperf_sheta(flected_word); lemma_ref.lemma_form = flected_word; }
       else {    lemma_ref.lemma_form = flected_word;  }
           if (outer_map_no % 10 == 2) {
