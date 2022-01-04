@@ -10,6 +10,9 @@ bool Sniff(std::string cyr_id, std::string substr, short int substr_length) {
         else { return true;}
       }
     else {
+                      std::ofstream testFile;
+                      testFile.open("test.txt", std::ios_base::app);
+                      testFile << cyr_id << '|' << substr << std::endl;
 
 
      int end_pos = cyr_id.length();
@@ -17,6 +20,12 @@ bool Sniff(std::string cyr_id, std::string substr, short int substr_length) {
     if(end_pos % 2 == 1) {offset_pos = end_pos - substr_length -3;}
     else {offset_pos = end_pos - substr_length -2;}
      std::string sniffstack = cyr_id.replace(0, offset_pos, "");
+
+      testFile << end_pos << '|' << offset_pos << std::endl << sniffstack << '|' << substr << std::endl;
+
+
+
+                      testFile.close();
 
      if(sniffstack.find(substr) == -1) { return false; }
      else {return true;}
@@ -42,7 +51,7 @@ std::string Fetch_Article(int row_no) {
                   case 0:
                      str1.assign("pьs");
                      str2.assign("pis");
-                     break;           
+                     break;
 
                  }
 

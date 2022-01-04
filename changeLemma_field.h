@@ -146,7 +146,7 @@ void Participise(Lemma &lemma_ref, std::string &participle_stem, short int stren
           std::string ending = verb_[outer_map_no][row_no];
           std::string flected_word = stem + ending;
 
-          if(conj_type == "11" || conj_type == "infix_11" || conj_type == "infix_12" || conj_type == "14" || conj_type == "15" || conj_type == "21" || conj_type == "31" || conj_type == "32" || conj_type == "iskati") {
+          if(conj_type == "11" || conj_type == "infix_11" || conj_type == "infix_12" || conj_type == "14" || conj_type == "15" || conj_type == "21" || conj_type == "31" || conj_type == "iskati") {
             bool check_imper = (mood == 3);
             class_I_clean(flected_word, check_imper);
             if(conj_type == "14" && (row_no == 43 || row_no == 44)) { ablaut_clean_14(flected_word); }       //change the infinitive and supine to full-grade ablaut. the imperfectives are left with zero-grade, which may be wrong but none are attested in the TOROT texts anyway

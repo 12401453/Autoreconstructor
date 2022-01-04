@@ -131,8 +131,9 @@
 
         //  masc -teĺь words
       if(outer_map_no == 231 && (row_no == 7)){ if(Sniff(cyr_id, "ю", 1) == false && Sniff(cyr_id, "ѹ", 1) == false) outer_map_no++;}
-      if(outer_map_no == 231 && (row_no == 15 || row_no == 20 || row_no == 21)){ if(Sniff(cyr_id, "і", 1)) outer_map_no++;}
-      if(outer_map_no == 231 && (row_no == 17)){ if(Sniff(cyr_id, "ь", 1)) outer_map_no++;}
+      if(outer_map_no == 231 && (row_no == 15 || row_no == 21)){ if(Sniff(cyr_id, "і", 1)) outer_map_no++;}
+      if(outer_map_no == 231 && row_no == 17){ if(Sniff(cyr_id, "ь", 1)) outer_map_no++;}
+      if(outer_map_no == 231 && row_no == 20) { if(Sniff(cyr_id, "ъі", 2) == false) outer_map_no++;}
 
         //  masc -aŕь words
       if(outer_map_no == 311 && row_no == 4) { if(Sniff(cyr_id, "еві", 3)) outer_map_no++; }

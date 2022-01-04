@@ -314,10 +314,12 @@ std::string glagoliticise(std::string form_cell) {
 }
 
 
-void addDummyrow(std::string filename){
+int addDummyrow(std::string filename){
   std::vector<std::string> row;
  std::ifstream inFile(filename);
-
+if(!inFile) {
+  return false;
+}
  std::string line, column;
  std::ofstream outFile;
 outFile.open("dummyrow.csv");
@@ -330,6 +332,7 @@ outFile << line << ',' << std::endl;
 }
 outFile.close();
 inFile.close();
+return true;
 }
 
 int form_col_no(std::string filename) {
@@ -354,7 +357,7 @@ std::cout << std::endl;
 
 while(row[j].find(form) == -1) {
   j = j + 1;
-  if(j == num_of_columns){std::cout << "No form header was found" << std::endl; break;}
+  if(j == num_of_columns){std::cout << "No 'form' header was found" << std::endl; j = 999; break;}
 }
 return j;
 }
@@ -380,7 +383,7 @@ std::cout << std::endl;
 */
 while(row[j].find(lemma_id) == -1) {
   j = j + 1;
-  if(j == num_of_columns){std::cout << "No lemma_id header was found" << std::endl; break;}
+  if(j == num_of_columns){std::cout << "No 'lemma_id' header was found" << std::endl; j = 999; break;}
 }
 return j;
 }
@@ -406,7 +409,7 @@ std::cout << std::endl;
 */
 while(row[j].find(morphology) == -1) {
   j = j + 1;
-  if(j == num_of_columns){std::cout << "No morphology header was found" << std::endl; break;}
+  if(j == num_of_columns){std::cout << "No 'morphology' header was found" << std::endl; j = 999; break;}
 }
 return j;
 }
@@ -528,23 +531,29 @@ inFile2.close();
 
 int main() {
 
-          std::string filename;
+    std::string filename;
 
-          std::cout << "Enter filename (including the .csv): ";
-          std::cin >> filename;
-          std::cout << "Cleaning, deep-cleaning and Glagoliticising TOROT text...";
-          addDummyrow(filename);
-          int form_pos = form_col_no("dummyrow.csv");
-          int lemma_id_pos = lemma_id_col_no("dummyrow.csv");
-         int morphology_pos =  morphology_col_no("dummyrow.csv");
-         std::string filename2 = str_Truncate(filename, 4) + "_autoreconstructed_temp.csv";
-         std::string filename3 = str_Truncate(filename, 4) + "_autoreconstructed.csv";
-         createBasefiles(filename2, form_pos, lemma_id_pos, morphology_pos);
-         std::remove("dummyrow.csv");
-         std::cout << std::endl << "Reconstructing...";
-        Reconstruct("deep_cleaned.csv", filename2, filename3);
-        const char* file_name_temp = filename2.c_str();
-        std::remove(file_name_temp);
+    std::cout << "Enter filename (including the .csv): ";
+    std::cin >> filename;
+
+    bool fileExists = addDummyrow(filename);
+      if(fileExists == false) { std::cout << "No such file in directory" << std::endl; return 0; }
+    int form_pos = form_col_no("dummyrow.csv");
+      if(form_pos == 999) { std::remove("dummyrow.csv"); return 0; }
+    int lemma_id_pos = lemma_id_col_no("dummyrow.csv");
+      if(lemma_id_pos == 999) { std::remove("dummyrow.csv"); return 0; }
+    int morphology_pos =  morphology_col_no("dummyrow.csv");
+      if(morphology_pos == 999) { std::remove("dummyrow.csv"); return 0; }
+    std::string filename2 = str_Truncate(filename, 4) + "_autoreconstructed_temp.csv";
+    std::string filename3 = str_Truncate(filename, 4) + "_autoreconstructed.csv";
+
+    std::cout << "Cleaning, deep-cleaning and Glagoliticising TOROT text...";
+    createBasefiles(filename2, form_pos, lemma_id_pos, morphology_pos);
+    std::remove("dummyrow.csv");
+    std::cout << std::endl << "Reconstructing..." << std::endl;
+    Reconstruct("deep_cleaned.csv", filename2, filename3);
+    const char* file_name_temp = filename2.c_str();
+    std::remove(file_name_temp);
 
 
 

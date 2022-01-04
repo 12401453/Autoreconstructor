@@ -298,64 +298,7 @@ return;
         str1.assign("ьn");
         str2.assign("ę");
         break;
-  /*    case 12:
-        str1.assign("pt");
-        str2.assign("t");
-        break;
-      case 13:
-        str1.assign("dt");
-        str2.assign("st");
-        break;
-       case 14:
-        str1.assign("tt");
-        str2.assign("st");
-        break;
-      case 15:
-        str1.assign("zt");
-        str2.assign("st");
-        break;
-      case 16:
-        str1.assign("gě");
-        str2.assign("žǞ");
-        break;
-      case 17:
-        str1.assign("xě");
-        str2.assign("šǞ");
-        break;
-      case 18:
-        str1.assign("kě");
-        str2.assign("čǞ");
-        break;
-      case 19:
-        str1.assign("ge");
-        str2.assign("že");
-        break;
-      case 20:
-        str1.assign("xe");
-        str2.assign("še");
-        break;
 
-      case 21:
-        str1.assign("ke");
-        str2.assign("če");
-        break;
-    case 22:
-      str1.assign("žě");
-      str2.assign("žǞ");
-          break;
-      case 23:
-        str1.assign("šě");
-        str2.assign("šǞ");
-        break;
-
-    case 24:
-        str1.assign("čě");
-        str2.assign("čǞ");
-        break;
-      case 25:
-        str1.assign("vt");
-        str2.assign("t");
-        break;   */
       }
 
      do {
@@ -412,38 +355,6 @@ return;
            str1.assign("zš");
            str2.assign("sš");
            break;
-  /*      case 7:
-           str1.assign("");
-           str2.assign("");
-           break;
-        case 8:
-           str1.assign("");
-           str2.assign("");
-           break;
-        case 9:
-           str1.assign("");
-           str2.assign("");
-           break;
-           case 10:
-               str1.assign("");
-               str2.assign("");
-               break;
-             case 11:
-               str1.assign("bt");
-               str2.assign("t");
-               break;
-             case 12:
-               str1.assign("pt");
-               str2.assign("t");
-               break;
-             case 13:
-               str1.assign("dt");
-               str2.assign("st");
-               break;
-              case 14:
-               str1.assign("tt");
-               str2.assign("st");
-               break;             */
 
     }
 
@@ -478,23 +389,6 @@ return;
                   str1.assign("ŕ̥");
                   str2.assign("er");
                   break;
-    /*          case 2:
-                  str1.assign("tjь");
-                  str2.assign("ti");
-                  break;
-              case 3:
-                 str1.assign("tš");
-                 str2.assign("tъš");
-                 break;
-              case 4:
-                 str1.assign("+š");
-                 str2.assign("š");
-                 break;
-              case 5:
-                 str1.assign("nš");
-                 str2.assign("š");
-                 break;                  */
-
 
           }
 
