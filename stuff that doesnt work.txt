@@ -12,7 +12,7 @@
 
 --doesn't find pronominal мъногъ inflections (it easily could)
 
---deviances in stems (e.g. вьседръжитель-type nouns) are mostly ignored
+--deviances in stems (e.g. вьседръжитель-type nouns) are mostly ignored (though here my decision to mark PV3-dependent frontings as deviances is possibly unjustifiable).
 
 --ниже, скорѣе, мъножѣе, and often лише are tagged as comparatives of adverbs so do not get correctly reconstructed
 
@@ -24,7 +24,7 @@
 
 --Supr. Gsg. личеса/личесе
 
---Deviances in the participle flexions like fem. Nsg. *ћǞ instead of *ћi, or PAP Npl. masc. *ši instead of *še, are detected and changed but the etymologically regular forms aren't generated
+--Deviances in the participle flexions like fem. Nsg. *ћǞ instead of *ћi, or PAP Npl. masc. *ši instead of *še, are detected and changed but the etymologically regular forms aren't generated (due to complications in how participles are passed through the conjugation-pipeline).
 
 --Doesn't bother with the že on nikotorъjь-že, because this is very rare word and arguably wrongly lemmatised anyway (котеръіи spellings)
 
@@ -36,7 +36,7 @@
 
 --божий and велий are constructed as *božьj-, *velьj- + the short-form soft adjective ending without regard to the strength marking, because there are too many instances of these words being marked as weak where no article is detectable, e.g. Mar. велиемь|велии|541370|-s---oipwi. There are examples of articled-forms of such words, i.e. those mentioned by Diels 1963 p.198, but the TOROT annotations are not a sensible way to detect them, so until I can be bothered to write a way to check for them, all such articled forms will be incorrectly reconstructed as short-forms. 
 
---Supr. imperatives like привꙙжате are marked as if they have the *ěte ending from the non-soft stems extended to the soft stems (because in Zogr. this is one of the only places you ever get soft-cons + jat' spellings, i.e ꙇштѣте), and that the jat' in this ending comes from the *ai diphthong, but the Supr. spellings suggest rather an *ē source of the vowel
+--Supr. imperatives like привꙙжате are marked as if they have the *ěte ending from the non-soft stems extended to the soft stems (because in Zogr. this is one of the only places you ever get soft-cons + jat' spellings, e.g. ꙇштѣте), and that the jat' in this ending comes from the *ai diphthong, but the Supr. spellings suggest rather an *ē source of the vowel and a *-Ǟte reconstruction, which would make Glagolitic ꙇштѣте forms in Zogr. a (for this text) deviant retention of Urksl. palatal + *Ǟ spellings. Mar. admittedly has осѧжате and съвѧжате, and Zogr. has съвѧжате, but Mar. осѧжате is from a bit of Luke 24 that is missing in Zogr., and the rest of the imperatives are on *-ĺ- where jat' spellings are mandatory in Glagolitic.
 
 --Doesn't consider the possibility of S-aorists of class 1 *-ęt- stem verbs (Psal. съмѩ сѩ <*sъmęsъ__sę)
 
