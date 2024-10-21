@@ -2,7 +2,7 @@ std::set<Lemma> lemma_list = {
 {55232,"med","","","",0,0,false,"","","",false,"","masc_u",2},
 {55811,"jǞrost","","","",0,0,false,"","","Derksen p.151-2 reconstructs an original *ě- (> our *jǞ-) rather than *a- for this word; the reconstruction in ESSJa08 p.179 is to a PIE form *i̯ōu-r, with *r as a formant and the *u lost (irregularly?) because it was non-syllabic: 'ōu̯ > ō'. The important thing is that both etymological dictionaries reconstruct an initial *i̯ (> *j), so we are justified in reconstructing *jǞr- rather than *ar-",false,"","fem_i",2},
 {58763,"pǫt","","","",0,0,false,"","","",false,"","masc_i",2},
-{58764,"﻿sъ","","","",0,0,false,"","","",false,"","",0},
+{58764,"sъ","","","",0,0,false,"","","",false,"","",0},
 {58765,"","","","",0,0,false,"","","",false,"","jь",2},
 {58766,"da","","","",0,0,false,"","","",false,"","",0},
 {58767,"ne","","","",0,0,false,"","","",false,"","",0},
