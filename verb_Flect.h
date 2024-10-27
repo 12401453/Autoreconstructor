@@ -125,21 +125,15 @@ void verb_Flect(Lemma &lemma_ref, short int int_morph_tag[10], std::string cyr_i
           outer_map_no = 902;
       }
 
-      if ((conj_type == "21" || conj_type == "11" || conj_type == "jьti" || conj_type == "14" || conj_type == "15" || conj_type == "rěsti") && (row_no == 10 || row_no == 13 || row_no == 16))
-      {
-        if (Sniff(cyr_id, "ох", 5))
-          outer_map_no++;
+      if ((conj_type == "21" || conj_type == "11" || conj_type == "jьti" || conj_type == "14" || conj_type == "15" || conj_type == "rěsti") && (row_no == 10 || row_no == 13 || row_no == 16)) {
+        if (Sniff(cyr_id, "ох", 5)) outer_map_no++;
       }
-      if ((conj_type == "21" || conj_type == "11" || conj_type == "jьti" || conj_type == "14" || conj_type == "15" || conj_type == "rěsti") && (row_no == 14 || row_no == 15 || row_no == 17))
-      {
-        if (Sniff(cyr_id, "ост", 4))
-          outer_map_no++;
+      if ((conj_type == "21" || conj_type == "11" || conj_type == "jьti" || conj_type == "14" || conj_type == "15" || conj_type == "rěsti") && (row_no == 14 || row_no == 15 || row_no == 17)) {
+        if (Sniff(cyr_id, "ост", 4)) outer_map_no++;
       }
-      if ((conj_type == "21" || conj_type == "11" || conj_type == "jьti" || conj_type == "14" || conj_type == "15" || conj_type == "rěsti") && row_no == 18)
-      {
-        if (Sniff(cyr_id, "ош", 3))
-          outer_map_no++;
-      } // Sniff() will check whether the portion of the cyr_id from the 5th word from the end contains "ош"
+      if ((conj_type == "21" || conj_type == "11" || conj_type == "jьti" || conj_type == "14" || conj_type == "15" || conj_type == "rěsti") && row_no == 18) {
+        if (Sniff(cyr_id, "ош", 3)) outer_map_no++;
+      }
       if ((conj_type != "11" && conj_type != "jьti" && conj_type != "14" && conj_type != "15" && conj_type != "rěsti" && conj_type != "infix_11" && conj_type != "jaxati") && (row_no == 6 || row_no == 15 || row_no == 24))
       {
         if (Sniff(cyr_id, "та", 2))

@@ -1,6 +1,5 @@
 std::unordered_map<int, inner_map> verb_ = {
 
-
   {111, v_11_c0},
   {112, v_11_c1},
   {113, v_11_c2},

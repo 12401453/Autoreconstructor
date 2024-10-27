@@ -278,7 +278,7 @@ inner_map N_adj_hard_c1 = {
 };
 
 inner_map N_oko_c0 = {
-{1, "﻿"},
+{1, ""},
 {43, "o"},
 {44, "o"},
 {45, "ese"},
